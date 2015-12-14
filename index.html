@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script src="epub.min.js"></script>
+    <script src="zip.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+      "use strict";
+
+      var Book = ePub("book.epub", {
+        width: 400,
+        height: 600,
+        spreads: false
+      });
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <div onclick="Book.prevPage();"> &larr; </div>
+
+    <div id="book"></div>
+
+    <div onclick="Book.nextPage();"> &rarr; </div>
+
+    <script>
+
+      Book.renderTo("book");
+
+    </script>
+
+  </body>
+
+</html>
